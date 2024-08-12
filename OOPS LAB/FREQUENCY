@@ -1,0 +1,25 @@
+import java.util.*;
+
+class frequency_char
+{
+  public static void main(String args[])
+ {	String str;
+	char c;
+	int n=0;
+	System.out.println("ENTER THE STRING : ");
+	Scanner s= new Scanner(System.in);
+	str=s.nextLine();
+	System.out.println("ENTER THE CHARACTER : ");
+	c=s.next().charAt(0);
+	int len=str.length();
+	for(int i=0;i<len;i++)
+	{	if (str.charAt(i)==c)
+		{
+			n=n+1;	
+		}
+	}
+	System.out.println("THE FREQUENCY OF THE CHARACTER : "+n );		
+	s.close();
+	
+ }
+}
