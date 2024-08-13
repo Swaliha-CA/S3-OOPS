@@ -1,7 +1,7 @@
-//program to find frequency
+//program to find reverse of a string
 //Swaliha_59
 import java.util.*;
-class frequency
+class reverse
 {
   public static void main(String args[])
   {
