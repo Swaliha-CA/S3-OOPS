@@ -1,0 +1,24 @@
+// Program to print the largest number
+// Swaliha.C.A
+// Roll No: 59
+
+import java.util.Scanner;
+
+class Large {
+    public static void main(String[] args) {
+        int largest = Integer.MIN_VALUE; 
+        int num, n;    
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the number of elements: ");
+        n = s.nextInt();
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            num = s.nextInt();
+            if (num > largest) {
+                largest = num;
+            }
+        }
+        System.out.println("The largest number is: " + largest);
+        s.close();
+    }
+}
