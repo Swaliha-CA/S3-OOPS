@@ -1,0 +1,99 @@
+//program to multiply 2 matrices
+//Swaliha_59
+import java.util.*;
+class matrixmultiplication 
+{
+        public static void main(String args[]) {
+        int[][] matrix1 = new int[50][50];
+        int[][] matrix2 = new int[50][50];
+        int[][] product = new int[50][50];
+        int i, j, k;
+        Scanner S = new Scanner(System.in);
+        System.out.println(“Enter the number of rows in the first matrix:”);
+        int row1 = S.nextInt();
+        System.out.println(“Enter the number of columns in the first matrix:”);
+        int col1 = S.nextInt();
+        System.out.println(“Enter the number of rows in the second matrix:”);
+        int row2 = S.nextInt();
+        System.out.println(“Enter the number of columns in the second matrix:”);
+        int col2 = S.nextInt();
+        If (col1 != row2) 
+        {
+               System.out.println(“The product is not possible”);
+               S.close();
+               return;
+        }
+        System.out.println(“Enter the elements of the first matrix:”);
+        {
+             for (i = 0; i < row1; i++)
+            {
+                 for (j = 0; j < col1; j++) 
+                {
+                     System.out.print(“matrix1[“ + i + “][“ + j + “]: “);
+                     matrix1[i][j] = S.nextInt();
+                }
+           }
+        }
+        System.out.println(“Enter the elements of the second matrix:”);
+        {
+        for (i = 0; i < row2; i++) 
+        {
+             for (j = 0; j < col2; j++)
+            {
+                  System.out.print(“matrix2[“ + i + “][“ + j + “]: “);
+                   matrix2[i][j] = S.nextInt();
+            }
+        }
+        }
+        {
+             for (i = 0; i < row1; i++) 
+             {
+                  for (j = 0; j < col2; j++) 
+                 {
+                       product[i][j] = 0;
+                       for (k = 0; k < col1; k++) 
+                   {
+                        product[i][j] += matrix1[i][k] * matrix2[k][j];
+                   }
+               }
+        }
+        }
+        System.out.println(“The product of the matrices is:”);
+        {
+        for (i = 0; i < row1; i++) 
+        {
+            for (j = 0; j < col2; j++) 
+            {
+                System.out.print(product[i][j] + “ “);
+            }
+            System.out.println();
+        }
+        }   
+        S.close();
+    }
+}
+
+OUTPUT
+Enter the number of rows in the first matrix:
+2
+Enter the number of columns in the first matrix:
+2
+Enter the number of rows in the second matrix:
+2
+Enter the number of columns in the second matrix:
+2
+Enter the elements of the first matrix:
+Matrix1[0][0]: 6
+Matrix1[0][1]: 2
+Matrix1[1][0]: 4
+Matrix1[1][1]: 8
+Enter the elements of the second matrix:
+Matrix2[0][0]: 1
+Matrix2[0][1]: 9
+Matrix2[1][0]: 7
+Matrix2[1][1]: 2
+The product of the matrices is:
+20 58
+60 52
+[Program finished]
+
