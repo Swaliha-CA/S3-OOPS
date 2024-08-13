@@ -1,3 +1,5 @@
+//program to find frequence of a character in a string
+//Swaliha_59
 import java.util.*;
 
 class frequency_char
