@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class SecondSmallestElement {
+
+    // Method to find the second smallest element in an array
+    public static Integer findSecondSmallest(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return null; // Not enough elements to find the second smallest
+        }
+
+        // Initialize the smallest and second smallest with maximum values
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int num : arr) {
+            if (num < smallest) {
+                // Update second smallest before updating smallest
+                secondSmallest = smallest;
+                smallest = num;
+            } else if (num < secondSmallest && num != smallest) {
+                secondSmallest = num;
+            }
+        }
+
+        // If secondSmallest is still Integer.MAX_VALUE, it means no second distinct smallest element was found
+        return (secondSmallest == Integer.MAX_VALUE) ? null : secondSmallest;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        if (n < 2) {
+            System.out.println("Array should have at least two elements.");
+            scanner.close();
+            return;
+        }
+
+        int[] arr = new int[n];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        Integer secondSmallest = findSecondSmallest(arr);
+
+        if (secondSmallest != null) {
+            System.out.println("The second smallest element is: " + secondSmallest);
+        } else {
+            System.out.println("There is no second smallest element in the array.");
+        }
+
+        scanner.close();
+    }
+}
