@@ -35,3 +35,13 @@
         fibonacciNonRecursive(n);
     }
 }
+
+
+output
+
+Fibonacci series using recursive method:
+0 1 1 2 3 5 8 13 21 34 
+Fibonacci series using non-recursive method:
+Fibonacci Series: 0 1 1 2 3 5 8 13 21 34 
+
+
