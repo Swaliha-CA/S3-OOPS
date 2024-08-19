@@ -8,7 +8,7 @@ class MultiplicationTable {
         for (int i = 1; i <= range; i++) {
             System.out.println(number + " x " + i + " = " + (number * i));
         }
-        System.out.println();  // Move to the next line after printing the table
+        System.out.println();  
     }
 
     
