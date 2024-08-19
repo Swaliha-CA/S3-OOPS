@@ -1,25 +1,25 @@
+//PRODRAM FOR CHECKING NUMBER IS PRIME OR NOT
 //Swaliha_59
 import java.util.Scanner;
-
-public class PrimeCheck {
+ class PrimeCheck {
 
 
     public static boolean isPrime(int num) {
         if (num <= 1) {
-            return false; // Numbers less than or equal to 1 are not prime
+            return false; 
         }
         if (num == 2) {
-            return true; // 2 is the only even prime number
+            return true;
         }
         if (num % 2 == 0) {
-            return false; // Other even numbers are not prime
+            return false;
         }
         for (int i = 3; i <= Math.sqrt(num); i += 2) {
             if (num % i == 0) {
-                return false; // Number is divisible by i, hence not prime
+                return false; 
             }
         }
-        return true; // Number is prime
+        return true; 
     }
 
     public static void main(String[] args) {
@@ -37,3 +37,10 @@ public class PrimeCheck {
         scanner.close();
     }
 }
+
+OUTPUT
+Enter a number to check if it's prime: 33
+33 is not a prime number.
+
+
+
