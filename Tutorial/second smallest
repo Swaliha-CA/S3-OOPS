@@ -1,20 +1,21 @@
+// PROGRAM TO FIND SECOND LARGEST
+//SWALIHA_59
 import java.util.Scanner;
 
-public class SecondSmallestElement {
+class Secondsmallest {
 
-    // Method to find the second smallest element in an array
+    
     public static Integer findSecondSmallest(int[] arr) {
         if (arr == null || arr.length < 2) {
-            return null; // Not enough elements to find the second smallest
+            return null; 
         }
 
-        // Initialize the smallest and second smallest with maximum values
         int smallest = Integer.MAX_VALUE;
         int secondSmallest = Integer.MAX_VALUE;
 
         for (int num : arr) {
             if (num < smallest) {
-                // Update second smallest before updating smallest
+              
                 secondSmallest = smallest;
                 smallest = num;
             } else if (num < secondSmallest && num != smallest) {
@@ -22,7 +23,6 @@ public class SecondSmallestElement {
             }
         }
 
-        // If secondSmallest is still Integer.MAX_VALUE, it means no second distinct smallest element was found
         return (secondSmallest == Integer.MAX_VALUE) ? null : secondSmallest;
     }
 
@@ -55,3 +55,9 @@ public class SecondSmallestElement {
         scanner.close();
     }
 }
+OUTPUT
+Enter the number of elements in the array: 5
+Enter 5 elements:
+1 55 88 9923 22 
+The second smallest element is: 22
+
