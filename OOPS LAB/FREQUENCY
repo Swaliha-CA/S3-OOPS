@@ -2,7 +2,7 @@
 //Swaliha_59
 import java.util.*;
 
-class frequency_char
+class frequency
 {
   public static void main(String args[])
  {	String str;
