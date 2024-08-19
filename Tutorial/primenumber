@@ -1,21 +1,18 @@
 import java.util.Scanner;
 
-public class PrimeNumbers {
+ class PrimeNumbers {
 
-    // Method to check if a number is prime
     public static boolean isPrime(int num) {
         if (num <= 1) {
-            return false; // Numbers less than or equal to 1 are not prime
+            return false; 
         }
         for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
-                return false; // Number is divisible by i, hence not prime
+                return false;
             }
         }
-        return true; // Number is prime
-    }
-
-    // Method to print all prime numbers up to a given limit
+        return true; 
+}
     public static void printPrimesUpTo(int limit) {
         System.out.println("Prime numbers up to " + limit + ":");
         for (int i = 2; i <= limit; i++) {
@@ -23,7 +20,7 @@ public class PrimeNumbers {
                 System.out.print(i + " ");
             }
         }
-        System.out.println(); // Move to the next line after printing all primes
+        System.out.println(); 
     }
 
     public static void main(String[] args) {
@@ -41,3 +38,7 @@ public class PrimeNumbers {
         scanner.close();
     }
 }
+OUTPUT
+Enter an integer: 48
+Prime numbers up to 48:
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
