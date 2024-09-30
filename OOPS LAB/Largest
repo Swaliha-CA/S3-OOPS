@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class Large {
     public static void main(String[] args) {
-        int largest = Integer.MIN_VALUE; 
+        int largest =0; 
         int num, n;    
         Scanner s = new Scanner(System.in);
         System.out.println("Enter the number of elements: ");
