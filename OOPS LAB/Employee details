@@ -1,0 +1,139 @@
+
+
+// Program to display details
+
+//Swaliha.C.A_59
+
+Class Employee {
+
+    String name;
+
+    Int age;
+
+    String phoneNumber;
+
+    String address;
+
+    Double salary;
+
+
+
+    Public Employee(String name, int age, String phoneNumber, String address, double salary) {
+
+        This.name = name;
+
+        This.age = age;
+
+        This.phoneNumber = phoneNumber;
+
+        This.address = address;
+
+        This.salary = salary;
+
+    }
+
+
+
+    Public void printSalary() {
+
+        System.out.println(“Salary of “ + name + “ is: “ + salary);
+
+    }
+
+
+
+    Public void displayDetails() {
+
+        System.out.println(“Name: “ + name);
+
+        System.out.println(“Age: “ + age);
+
+        System.out.println(“Phone Number: “ + phoneNumber);
+
+        System.out.println(“Address: “ + address);
+
+    }
+
+}
+
+
+
+Class Officer extends Employee {
+
+    String specialization;
+
+
+
+    Public Officer(String name, int age, String phoneNumber, String address, double salary, String specialization) {
+
+        Super(name, age, phoneNumber, address, salary);
+
+        This.specialization = specialization;
+
+    }
+
+    Public void displayOfficerDetails() {
+
+        displayDetails();
+
+        System.out.println(“Specialization: “ + specialization);
+
+        printSalary();
+
+    }
+
+}
+
+
+
+Class Manager extends Employee {
+
+    String department;
+
+    Public Manager(String name, int age, String phoneNumber, String address, double salary, String department) {
+
+        Super(name, age, phoneNumber, address, salary);
+
+        This.department = department;
+
+    }
+
+    Public void displayManagerDetails() {
+
+        displayDetails();
+
+        System.out.println(“Department: “ + department);
+
+        printSalary();
+
+    }
+
+}
+
+Public class Main {
+
+    Public static void main(String[] args) {
+
+        Officer officer = new Officer(“Dorothy”, 30, “123-456-7890”, “123 Main St”, 50000, “Security”);
+
+        System.out.println(“Officer Details:”);
+
+        Officer.displayOfficerDetails();
+
+        System.out.println();
+
+        Manager manager = new Manager(“Swaliha”, 20, “987-654-3210”, “456 Elm St”, 80000, “HR”);
+
+        System.out.println(“Manager Details:”);
+
+        Manager.displayManagerDetails();
+
+    }
+
+}
+
+
+
+
+
+
