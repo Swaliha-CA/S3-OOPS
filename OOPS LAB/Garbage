@@ -1,1 +1,32 @@
+// program of garbage collector
+//Swaliha_59
+public class Garbage
 
+{
+	public static void main(String[] args) 
+
+	{
+
+	        Garbage t1 = new Garbage();
+
+		Garbage  t2 = new Garbage();
+
+		t1 = null;
+
+		System.gc();
+
+		t2 = null;
+
+	System.out.println("Garbage collector called:");
+
+	}
+		protected void finalize()
+
+	{
+                System.out.println(" object is garbage collected:");
+
+		
+
+		
+	}
+}
