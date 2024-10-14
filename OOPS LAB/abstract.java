@@ -36,4 +36,10 @@ abstract class shape{
 			H.numberOfsides();
 	        }
 	   }
+OUTPUT
+Number of sides of rectangle=4
+Number of sides of triangle=3
+Number of sides of hexagon=6
+
+	
 				
