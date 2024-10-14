@@ -1,3 +1,5 @@
+//program of abstract method
+//Swaliha.C.A_59
 abstract class shape{
 	public abstract void numberOfsides();
 	}
@@ -17,7 +19,7 @@ abstract class shape{
 		}
 		class Hexagon extends shape
 		{
-			public void numberOfsides()
+			public void nmmberOfsides()
 			{
 				System.out.println("Number of sides of hexagon=6");
 			}
