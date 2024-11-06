@@ -2,25 +2,25 @@
 
 //Swaliha_59
 
-Import java.util.Scanner;
+import java.util.Scanner;
 
 Class Main {
 
-    Int binarySearch(int array[], int element, int low, int high) {
+    int binarySearch(int array[], int element, int low, int high) {
 
-        While (low <= high) {
+        while (low <= high) {
 
-            Int mid = low + (high – low) / 2;
+            int mid = low + (high – low) / 2;
 
-            If (array[mid] == element)
+            if (array[mid] == element)
 
                 Return mid;
 
-            If (array[mid] < element)
+            if (array[mid] < element)
 
                 Low = mid + 1;
 
-            Else
+            else
 
                 High = mid – 1;
 
@@ -30,23 +30,23 @@ Class Main {
 
     }
 
-   Public static void main(String args[]) {
+   public static void main(String args[]) {
 
         Main obj = new Main();
 
-        Int[] array = { 3, 4, 5, 6, 7, 8, 9 };
+        int[] array = { 3, 4, 5, 6, 7, 8, 9 };
 
-        Int n = array.length;
+        int n = array.length;
 
  Scanner scanner = new Scanner(System.in);
 
         System.out.print(“Enter the element to be searched: “);
 
-        Int element = scanner.nextInt();
+        int element = scanner.nextInt();
 
-Int result = obj.binarySearch(array, element, 0, n – 1);
+int result = obj.binarySearch(array, element, 0, n – 1);
 
-If (result == -1) {
+if (result == -1) {
 
             System.out.println(“Element not found in the array”);
 
@@ -56,7 +56,7 @@ If (result == -1) {
 
         }
 
-Scanner.close();
+scanner.close();
 
     }
 
