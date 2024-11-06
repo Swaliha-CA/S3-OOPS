@@ -17,3 +17,4 @@ class sumofdigits
 		S.close();
 	}
 }
+
