@@ -1,0 +1,76 @@
+//program to perform binary search
+
+//Swaliha_59
+
+Import java.util.Scanner;
+
+Class Main {
+
+    Int binarySearch(int array[], int element, int low, int high) {
+
+        While (low <= high) {
+
+            Int mid = low + (high – low) / 2;
+
+            If (array[mid] == element)
+
+                Return mid;
+
+            If (array[mid] < element)
+
+                Low = mid + 1;
+
+            Else
+
+                High = mid – 1;
+
+        }
+
+        Return -1;
+
+    }
+
+   Public static void main(String args[]) {
+
+        Main obj = new Main();
+
+        Int[] array = { 3, 4, 5, 6, 7, 8, 9 };
+
+        Int n = array.length;
+
+ Scanner scanner = new Scanner(System.in);
+
+        System.out.print(“Enter the element to be searched: “);
+
+        Int element = scanner.nextInt();
+
+Int result = obj.binarySearch(array, element, 0, n – 1);
+
+If (result == -1) {
+
+            System.out.println(“Element not found in the array”);
+
+        } else {
+
+            System.out.println(“Element found at index: “ + result);
+
+        }
+
+Scanner.close();
+
+    }
+
+}
+
+OUTPUT
+
+Enter the element to be searched: 7
+
+Element found at index: 4
+
+
+
+
+
+
+
