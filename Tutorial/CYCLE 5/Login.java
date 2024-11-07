@@ -54,8 +54,9 @@ class LoginUI implements ActionListener {
     }
 
     private boolean validateCredentials(String username, char[] password) {
-        // Basic validation - you can customize this logic as needed
+        
         return username.equals("admin") && String.valueOf(password).equals("password");
+        
     }
 
     private void showWelcomePage() {
